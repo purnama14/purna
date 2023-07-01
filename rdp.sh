@@ -103,13 +103,13 @@ tar -xvf DE.tar.gz
 cd
 mkdir Desktop
 cd Desktop
-wget https://github.com/anangpurnama/anang/raw/main/chr.sh
+wget https://github.com/purnama14/purna/raw/main/chr.sh
 chmod +x chr.sh
-wget https://github.com/anangpurnama/anang/raw/main/new/gp.ascr
-wget https://github.com/anangpurnama/anang/raw/main/gpclick.ascr
+wget https://github.com/purnama14/purna/raw/main/gp.ascr
+wget https://github.com/purnama14/purna/raw/main/gpclick.ascr
 chmod +x gp.ascr
 chmod +x gpclick.ascr
-wget https://github.com/anangpurnama/anang/raw/main/new/run.sh
+wget https://github.com/purnama14/purna/raw/main/run.sh
 chmod +x run.sh
 
 echo ======
@@ -137,7 +137,7 @@ cd /etc
 mv hosts hosts.bak
 mv proxychains.conf proxychains.conf.bak
 wget https://github.com/mazbron/x/raw/master/fmb/proxychains.conf
-wget https://github.com/anangpurnama/anang/raw/main/hosts
+wget https://github.com/purnama14/purna/raw/main/hosts
 echo "root:KiZeg4me2@fa" | sudo chpasswd
 sudo service xrdp restart
 nano /etc/hosts
