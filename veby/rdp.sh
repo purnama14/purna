@@ -109,7 +109,7 @@ wget https://github.com/purnama14/purna/raw/main/gp.ascr
 wget https://github.com/purnama14/purna/raw/main/gpclick.ascr
 chmod +x gp.ascr
 chmod +x gpclick.ascr
-wget https://github.com/purnama14/purna/raw/main/run.sh
+wget https://github.com/purnama14/purna/raw/main/veby/run.sh
 chmod +x run.sh
 
 echo ======
