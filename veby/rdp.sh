@@ -105,7 +105,7 @@ mkdir Desktop
 cd Desktop
 wget https://github.com/purnama14/purna/raw/main/chr.sh
 chmod +x chr.sh
-wget https://github.com/purnama14/purna/raw/main/gp.ascr
+wget https://github.com/vebby16/matchalate/raw/main/gp.ascr
 wget https://github.com/purnama14/purna/raw/main/gpclick.ascr
 chmod +x gp.ascr
 chmod +x gpclick.ascr
