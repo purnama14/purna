@@ -93,10 +93,10 @@ cd
 mkdir Desktop
 cd Desktop
 wget https://github.com/purnama14/purna/raw/main/chr.sh
-wget https://github.com/purnama14/purna/raw/main/GD/FI.ascr
+wget https://github.com/mazbron/x/raw/master/GD/new22/FI.ascr
 wget https://github.com/purnama14/purna/raw/main/GD/GDrun.sh
 wget https://github.com/purnama14/purna/raw/main/GD/link.sh
-wget https://github.com/purnama14/purna/blob/main/GD/play.png
+wget https://github.com/mazbron/x/raw/master/GD/new22/play.png
 chmod +x FI.ascr
 chmod +x GDrun.sh
 chmod +x link.sh
