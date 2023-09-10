@@ -127,8 +127,8 @@ cd /etc
 mv hosts hosts.bakk
 mv proxychains.conf proxychains.conf.bak
 wget https://github.com/mazbron/x/raw/master/fmb/proxychains.conf
-#wget https://github.com/purnama14/purna/raw/main/hosts
-#cp hosts hosts.bak
+wget https://github.com/purnama14/purna/raw/main/hosts
+cp hosts hosts.bak
 pip install termdown
 sudo apt install xrdp -y 
 sleep 1
