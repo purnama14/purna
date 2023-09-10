@@ -147,7 +147,7 @@ sleep 1
 echo Removing Screensaver
 apt-get remove xscreensaver -y
 sudo service xrdp restart
-#nano /etc/hosts
+nano /etc/hosts
 sudo systemctl enable xrdp
 sudo update-alternatives --config x-session-manager
 
