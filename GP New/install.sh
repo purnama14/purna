@@ -93,17 +93,17 @@ cd
 mkdir Desktop
 cd Desktop
 wget https://github.com/mazbron/x/raw/master/fmb/chr.sh
-wget https://raw.githubusercontent.com/mazbron/x/master/rb/FIGP.ascr
-wget https://github.com/mazbron/x/raw/master/rb/GPNew.sh
-wget https://raw.githubusercontent.com/mazbron/x/master/rb/linkFIGP.sh
-wget https://raw.githubusercontent.com/mazbron/x/master/rb/playgp.png
-wget https://raw.githubusercontent.com/mazbron/x/master/rb/playgp2.png
+wget https://github.com/purnama14/purna/raw/main/GP%20New/FIGP.ascr
+wget https://github.com/purnama14/purna/raw/main/GP%20New/GPNew.sh
+wget https://github.com/purnama14/purna/raw/main/GP%20New/linkFIGP.sh
+wget https://github.com/purnama14/purna/raw/main/GP%20New/playgp.png
+wget https://github.com/purnama14/purna/raw/main/GP%20New/playgp2.png
 chmod +x FIGP.ascr
 chmod +x GPNew.sh
 chmod +x linkFIGP.sh
 chmod +x chr.sh
 sleep 1
-echo "root:Ributprayitno1" | sudo chpasswd
+echo "root:KiZeg4me2@fa" | sudo chpasswd
 sudo service xrdp restart
 apt install apache2 -y
 #apt install php libapache2-mod-php php-mysql -y
