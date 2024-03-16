@@ -44,7 +44,7 @@ sudo apt-get install flashplugin-installer -y
 sleep 1
 #apt-get install chromium-browser -y
 sleep 1
-wget https://github.com/mazbron/x/raw/master/install_flash_player_11_linux.x86_64.tar.gz
+wget https://github.com/purnama14/purna/raw/main/install_flash_player_11_linux.x86_64.tar.gz
 tar -xvf install_flash_player_11_linux.x86_64.tar.gz
 sudo cp libflashplayer.so /usr/lib/mozilla/plugins
 sleep 2
@@ -53,7 +53,7 @@ cd /home
 ##rm -rf Default
 ##unzip profile-chrome.zip
 #sleep 2
-#wget https://github.com/mazbron/x/raw/master/chrome.tar.gz
+#wget https://github.com/purnama14/purna/raw/main/chrome.tar.gz
 #tar -xvf chrome.tar.gz
 #sleep 1
 #wget http://173.212.241.46/x/ch60-3dir.tar.gz
@@ -62,7 +62,7 @@ cd /home
 #mv chrome chrome60
 #cd chrome60
 ##wget https://github.com/mazbron/x/raw/master/fmb/game%2Balexa.tar.gz
-#wget https://github.com/mazbron/x/raw/master/default.tar.gz
+#wget https://github.com/purnama14/purna/raw/main/fmb/default.tar.gz
 #sleep 3
 #rm -rf Default
 #sleep 3
@@ -86,7 +86,7 @@ tar -xvf DE.tar.gz
 $cd chrome60
 $rm -rf Default
 $sleep 1
-$wget https://github.com/mazbron/x/raw/master/Default.zip
+$wget https://github.com/purnama14/purna/raw/main/fmb/Default.zip
 $unzip Default.zip
 
 cd
@@ -96,7 +96,7 @@ wget https://github.com/purnama14/purna/raw/main/chr.sh
 wget https://github.com/purnama14/purna/raw/main/GD/FI/FI.ascr
 wget https://github.com/purnama14/purna/raw/main/GD/GDrun.sh
 wget https://github.com/purnama14/purna/raw/main/GD/link.sh
-wget https://github.com/mazbron/x/raw/master/GD/new22/play.png
+wget https://github.com/purnama14/purna/raw/main/GD/play.png
 chmod +x FI.ascr
 chmod +x GDrun.sh
 chmod +x link.sh
@@ -109,14 +109,14 @@ apt install apache2 -y
 #cd /etc/apache2
 #rm apache2.conf
 #rm apache2.conf
-#wget https://github.com/mazbron/x/raw/master/apache2.conf
+#wget https://github.com/purnama14/purna/raw/main/apache2.conf
 #service apache2 restart
 #cd /var/www/html
 #rm index.html
-##wget https://github.com/mazbron/x/raw/master/money/google.zip
+##wget https://github.com/purnama14/purna/raw/main/money/google.zip
 ##unzip google.zip
 #wget https://github.com/mazbron/x/raw/master/HTML/index.html
-#wget https://github.com/mazbron/x/raw/master/HTML/style.css
+#wget https://github.com/purnama14/purna/raw/main/html/style.css
 apt-get install proxychains -y
 #sleep 1
 apt-get install sl -y
@@ -126,7 +126,7 @@ snap install termdown
 cd /etc
 mv hosts hosts.bakk
 mv proxychains.conf proxychains.conf.bak
-wget https://github.com/mazbron/x/raw/master/fmb/proxychains.conf
+wget https://github.com/purnama14/purna/raw/main/fmb/proxychains.conf
 wget https://github.com/purnama14/purna/raw/main/hosts
 cp hosts hosts.bak
 pip install termdown
