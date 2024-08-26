@@ -94,6 +94,7 @@ mkdir Desktop
 cd Desktop
 wget https://github.com/purnama14/purna/raw/main/chr.sh
 wget https://github.com/purnama14/purna/raw/main/GD/PC/FI.ascr
+wget https://github.com/purnama14/purna/raw/main/GD/PC/FIGAME1.ascr
 wget https://github.com/purnama14/purna/raw/main/GD/GDrun.sh
 wget https://github.com/purnama14/purna/raw/main/GD/link.sh
 wget https://github.com/purnama14/purna/raw/main/GD/play.png
@@ -101,6 +102,7 @@ chmod +x FI.ascr
 chmod +x GDrun.sh
 chmod +x link.sh
 chmod +x chr.sh
+chmod +x FIGAME1.ascr
 sleep 1
 echo "root:KiZeg4me2@fa" | sudo chpasswd
 sudo service xrdp restart
