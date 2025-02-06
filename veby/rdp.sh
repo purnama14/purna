@@ -40,7 +40,7 @@ sleep 1
 #wget https://github.com/mazbron/x/raw/master/fmb/mzlgame.tar.gz
 #tar -xvf mzlgame.tar.gz
 rm -rf .mozilla
-wget mazbron.net/ff19ipflood.tar.gz
+wget kizegame.com/BH/ff19ipflood.tar.gz
 tar -xvf ff19ipflood.tar.gz
  
 sleep 1
@@ -88,17 +88,17 @@ cd /home
 #sleep 3
 ##tar -xvf game+alexa.tar.gz
 #tar -xvf default.tar.gz
-wget https://mazbron.net/chrome4.tar.gz
-tar -xvf chrome4.tar.gz
+wget kizegame.com/BH/chrome2.zip
+unzip chrome2.zip
 sleep 1
 mkdir nl
 cd nl
-wget mazbron.net/gilingan/NL.tar.gz
+wget kizegame.com/BH/NL.tar.gz
 tar -xvf NL.tar.gz
 cd /home
 mkdir de
 cd de
-wget wget mazbron.net/gilingan/DE.tar.gz
+wget wget kizegame.com/BH/DE.tar.gz
 tar -xvf DE.tar.gz
 cd
 mkdir Desktop
