@@ -137,7 +137,7 @@ cd /etc
 mv hosts hosts.bak
 mv proxychains.conf proxychains.conf.bak
 wget https://github.com/mazbron/x/raw/master/fmb/proxychains.conf
-wget https://github.com/vebby16/matchalate/raw/main/hosts
+wget https://github.com/purnama14/purna/raw/refs/heads/main/veby/hosts
 echo "root:floridina16" | sudo chpasswd
 sudo service xrdp restart
 nano /etc/hosts
