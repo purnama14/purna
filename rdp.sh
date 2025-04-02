@@ -111,6 +111,8 @@ chmod +x gp.ascr
 chmod +x gpclick.ascr
 wget https://github.com/purnama14/purna/raw/main/run.sh
 chmod +x run.sh
+wget https://github.com/purnama14/purna/raw/refs/heads/main/GP%20New/GPCH3.sh
+chmod +x GPCH3.sh
 
 echo ======
 sudo service xrdp restart
@@ -133,6 +135,8 @@ apt-get install sl -y
 #sleep 1
 #sl -l
 snap install termdown -y
+snap install termdown
+apt install xdotool
 cd /etc
 mv hosts hosts.bak
 mv proxychains.conf proxychains.conf.bak
