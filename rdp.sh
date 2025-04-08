@@ -113,6 +113,8 @@ wget https://github.com/purnama14/purna/raw/main/run.sh
 chmod +x run.sh
 wget https://github.com/purnama14/purna/raw/refs/heads/main/GP%20New/PC/GPCH3.sh
 chmod +x GPCH3.sh
+wget https://github.com/purnama14/purna/raw/refs/heads/main/Nitro/RUNNITRO.sh
+chmod +x RUNNITRO.sh
 
 echo ======
 sudo service xrdp restart
