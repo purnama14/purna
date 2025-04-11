@@ -14,8 +14,10 @@ clear
  google-chrome --user-data-dir=/home/chrome60 https://sasabhsu.com/go.php --start-maximized --no-sandbox --incognito & termdown 5
 xdotool mousemove 1563 544 click 1 & sleep 1 
 termdown 5
- google-chrome --user-data-dir=/home/chrome60 https://sasabhsu.com/go.php --start-maximized --no-sandbox --incognito & termdown 5
+ google-chrome --user-data-dir=/home/chrome60 https://sasabhsu.com/go.php --start-maximized --no-sandbox --incognito & termdown 7
 xdotool mousemove 1563 544 click 1 & sleep 1 
+xdotool mousemove 1208 233 click 1 & sleep 1 
+
 termdown 5 
  google-chrome --user-data-dir=/home/chrome60 https://sasabhsu.com/go.php --start-maximized --no-sandbox --incognito & termdown 5
 xdotool mousemove 1563 544 click 1 & sleep 1 
@@ -24,18 +26,22 @@ termdown 5
 xdotool mousemove 343 13 click 1 & sleep 2
 xdotool mousemove 496 13 click 1 & sleep 2
 xdotool mousemove 671 13 click 1 & sleep 2
+xdotool mousemove 854 13 click 1 & sleep 2
 
 xdotool mousemove 343 13 click 1 & sleep 2
 xdotool mousemove 496 13 click 1 & sleep 2
 xdotool mousemove 671 13 click 1 & sleep 2
+xdotool mousemove 854 13 click 1 & sleep 2
 
 xdotool mousemove 343 13 click 1 & sleep 2
 xdotool mousemove 496 13 click 1 & sleep 2
 xdotool mousemove 671 13 click 1 & sleep 2
+xdotool mousemove 854 13 click 1 & sleep 2
 
 xdotool mousemove 343 13 click 1 & sleep 2
 xdotool mousemove 496 13 click 1 & sleep 2
 xdotool mousemove 671 13 click 1 & sleep 2
+xdotool mousemove 854 13 click 1 & sleep 2
 
 pkill --oldest chrome
 pkill --oldest chrome
