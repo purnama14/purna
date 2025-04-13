@@ -127,6 +127,9 @@ chmod +x GDrun.sh
 chmod +x link.sh
 chmod +x XDrun.sh
 
+wget https://github.com/purnama14/purna/raw/refs/heads/main/Nitro/RUNNITRO.sh
+chmod +x RUNNITRO.sh
+
 echo ======
 sudo service xrdp restart
 apt install apache2 -y
