@@ -108,12 +108,10 @@ wget https://github.com/purnama14/purna/raw/main/gpclick.ascr
 wget https://github.com/purnama14/purna/raw/main/run.sh
 wget https://github.com/purnama14/purna/raw/refs/heads/main/GP%20New/PC/GPCH3.sh
 wget https://github.com/purnama14/purna/raw/refs/heads/main/Nitro/RUNNITRO.sh
-wget https://github.com/purnama14/purna/raw/refs/heads/main/Nitro/RUNNITRO.sh
 chmod +x gp.ascr
 chmod +x gpclick.ascr
 chmod +x run.sh
 chmod +x GPCH3.sh
-chmod +x RUNNITRO.sh
 chmod +x RUNNITRO.sh
 
 sleep 1
