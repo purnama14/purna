@@ -103,18 +103,29 @@ tar -xvf DE.tar.gz
 cd
 mkdir Desktop
 cd Desktop
+
 wget https://github.com/purnama14/purna/raw/main/chr.sh
-chmod +x chr.sh
 wget https://github.com/purnama14/purna/raw/main/gp.ascr
 wget https://github.com/purnama14/purna/raw/main/gpclick.ascr
+wget https://github.com/purnama14/purna/raw/main/run.sh
+wget https://github.com/purnama14/purna/raw/refs/heads/main/GP%20New/PC/GPCH3.sh
+wget https://github.com/purnama14/purna/raw/refs/heads/main/Nitro/RUNNITRO.sh
+chmod +x chr.sh
 chmod +x gp.ascr
 chmod +x gpclick.ascr
-wget https://github.com/purnama14/purna/raw/main/run.sh
 chmod +x run.sh
-wget https://github.com/purnama14/purna/raw/refs/heads/main/GP%20New/PC/GPCH3.sh
 chmod +x GPCH3.sh
-wget https://github.com/purnama14/purna/raw/refs/heads/main/Nitro/RUNNITRO.sh
 chmod +x RUNNITRO.sh
+
+wget https://github.com/purnama14/purna/raw/main/GD/FI/FI.ascr
+wget https://github.com/purnama14/purna/raw/main/GD/GDrun.sh
+wget https://github.com/purnama14/purna/raw/main/GD/link.sh
+wget https://github.com/purnama14/purna/raw/main/GD/play.png
+wget https://github.com/purnama14/purna/raw/refs/heads/main/GD/XDrun.sh
+chmod +x FI.ascr
+chmod +x GDrun.sh
+chmod +x link.sh
+chmod +x XDrun.sh
 
 echo ======
 sudo service xrdp restart
