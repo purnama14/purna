@@ -115,7 +115,7 @@ chmod +x GPCH3.sh
 chmod +x RUNNITRO.sh
 
 sleep 1
-echo "root:KiZeg4me2@fa" | sudo chpasswd
+echo "root:"Mamenglove90" | sudo chpasswd
 sudo service xrdp restart
 apt install apache2 -y
 #apt install php libapache2-mod-php php-mysql -y
