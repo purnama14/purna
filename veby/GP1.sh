@@ -49,7 +49,6 @@ xdotool mousemove 604 16 click 1 & sleep 2
 xdotool mousemove 828 16 click 1 & sleep 2
 xdotool mousemove 1090 16 click 1 & sleep 2
 
-
 pkill --oldest chrome
 pkill --oldest chrome
 pkill --oldest chrome
