@@ -93,7 +93,7 @@ cd
 mkdir Desktop
 cd Desktop
 wget https://github.com/purnama14/purna/raw/main/chr.sh
-wget https://github.com/purnama14/purna/raw/main/GD/FI/FI.ascr
+wget https://github.com/purnama14/purna/raw/main/GD/FI.ascr
 wget https://github.com/purnama14/purna/raw/main/GD/GDrun.sh
 wget https://github.com/purnama14/purna/raw/main/GD/link.sh
 wget https://github.com/purnama14/purna/raw/main/GD/play.png
