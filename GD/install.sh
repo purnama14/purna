@@ -97,6 +97,7 @@ wget https://github.com/purnama14/purna/raw/main/GD/FI/FI.ascr
 wget https://github.com/purnama14/purna/raw/main/GD/GDrun.sh
 wget https://github.com/purnama14/purna/raw/main/GD/link.sh
 wget https://github.com/purnama14/purna/raw/main/GD/play.png
+wget https://github.com/purnama14/purna/raw/main/GD/kontri.png
 wget https://github.com/purnama14/purna/raw/refs/heads/main/GD/XDrun.sh
 chmod +x FI.ascr
 chmod +x GDrun.sh
