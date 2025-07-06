@@ -1,59 +1,83 @@
 #!/bin/bash
 set -e
+export DEBIAN_FRONTEND=noninteractive
 
-echo "Updating and upgrading your system..."
+# Install figlet & toilet untuk banner
+apt update -y
+apt install -y toilet
+
+# Banner warna-warni
+echo ""
+toilet -f big -F gay "ANANG INSTALLER"
+echo ""
+
+# Typewriter effect (nama kamu)
+echo -ne "\e[33mInstalling for: \e[0m"
+for c in A n a n g; do
+    echo -n "$c"
+    sleep 0.3
+done
+echo -e "\e[32m ...Ready!\e[0m"
+echo ""
 sleep 1
-apt update -y && apt upgrade -y
 
-sleep 2
-echo "Installing essentials: zip, unzip, nano..."
-apt install -y zip unzip nano
-
-sleep 2
-echo "Installing Actiona automation tool..."
-apt install -y actiona
-
+# Animasi dot-dot
+echo -ne "\e[34mStarting setup"
+for i in {1..6}; do
+    echo -n "."
+    sleep 0.5
+done
+echo -e "\e[0m Done!"
 sleep 1
-echo "Installing OpenJDK 11..."
-apt install -y openjdk-11-jdk
 
+##############################################
+# Core install process
+##############################################
+echo -e "\e[36m[+] Updating system packages...\e[0m"
+apt update -y && apt -o Dpkg::Options::="--force-confdef" \
+                    -o Dpkg::Options::="--force-confold" \
+                    upgrade -y
 sleep 1
-echo "Installing Firefox..."
-apt install -y firefox
 
-sleep 1
-echo "Installing Google Chrome..."
-wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
+echo -e "\e[36m[+] Installing essentials...\e[0m"
+apt install -y zip unzip nano actiona openjdk-11-jdk firefox apache2 \
+               proxychains sl net-tools xdotool lxde xrdp
+
+echo -e "\e[36m[+] Installing Chrome...\e[0m"
+wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key add -
 echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main" > /etc/apt/sources.list.d/google-chrome.list
 apt update -y
 apt install -y google-chrome-stable
 
-sleep 1
-echo "Autocleaning..."
-apt autoclean -y
+echo -e "\e[36m[+] Installing termdown & python termdown...\e[0m"
+snap install termdown
+pip install termdown
 
-sleep 1
-echo "Downloading and extracting chrome profiles..."
+##############################################
+# Configure xrdp
+##############################################
+echo -e "\e[35m[+] Configuring XRDP & firewall...\e[0m"
+adduser xrdp ssl-cert
+systemctl restart xrdp
+systemctl enable xrdp
+ufw allow 3389
+ufw allow from 1.1.1.1 to any port 3389
+
+##############################################
+# Download files
+##############################################
+echo -e "\e[35m[+] Downloading additional resources...\e[0m"
 cd /home
-wget -q kizegame.com/BH/chrome2.zip
-unzip chrome2.zip
+wget -q kizegame.com/BH/chrome2.zip && unzip chrome2.zip
 
-mkdir nl
-cd nl
-wget -q kizegame.com/BH/NL.tar.gz
-tar -xvf NL.tar.gz
+mkdir -p nl && cd nl
+wget -q kizegame.com/BH/NL.tar.gz && tar -xvf NL.tar.gz
 
 cd /home
-mkdir de
-cd de
-wget -q kizegame.com/BH/DE.tar.gz
-tar -xvf DE.tar.gz
+mkdir -p de && cd de
+wget -q kizegame.com/BH/DE.tar.gz && tar -xvf DE.tar.gz
 
-sleep 1
-cd
-mkdir Desktop
-cd Desktop
-echo "Downloading scripts and icons..."
+cd && mkdir -p Desktop && cd Desktop
 wget -q https://github.com/purnama14/purna/raw/main/chr.sh
 wget -q https://github.com/purnama14/purna/raw/main/GD/FI.ascr
 wget -q https://github.com/purnama14/purna/raw/main/GD/GDrun.sh
@@ -61,56 +85,32 @@ wget -q https://github.com/purnama14/purna/raw/main/GD/link.sh
 wget -q https://github.com/purnama14/purna/raw/main/GD/play.png
 wget -q https://github.com/purnama14/purna/raw/main/GD/kontri.png
 wget -q https://github.com/purnama14/purna/raw/refs/heads/main/GD/XDrun.sh
-
-chmod +x FI.ascr GDrun.sh link.sh chr.sh XDrun.sh
-
 wget -q https://github.com/purnama14/purna/raw/main/gp.ascr
 wget -q https://github.com/purnama14/purna/raw/main/gpclick.ascr
 wget -q https://github.com/purnama14/purna/raw/main/run.sh
 wget -q https://github.com/purnama14/purna/raw/refs/heads/main/GP%20New/PC/GPCH3.sh
 wget -q https://github.com/purnama14/purna/raw/refs/heads/main/Nitro/RUNNITRO.sh
 
-chmod +x gp.ascr gpclick.ascr run.sh GPCH3.sh RUNNITRO.sh
+chmod +x *.ascr *.sh
 
-sleep 1
-echo "Setting root password..."
-echo "root:KiZeg4me2@fa" | sudo chpasswd
-
-sleep 1
-echo "Installing & configuring xrdp and lxde..."
-apt install -y xrdp lxde
-adduser xrdp ssl-cert
-systemctl restart xrdp
-ufw allow 3389
-ufw allow from 1.1.1.1 to any port 3389
-systemctl enable xrdp
-
-sleep 1
-echo "Installing additional tools..."
-apt install -y apache2 proxychains sl net-tools xdotool
-
-snap install termdown
-pip install termdown
-
-sleep 1
-echo "Updating /etc/hosts and proxychains.conf..."
+##############################################
+# System tweaks
+##############################################
+echo -e "\e[33m[+] Tweaking system files & cleaning up...\e[0m"
+echo "root:KiZeg4me2@fa" | chpasswd
 cd /etc
 mv hosts hosts.bak || true
 mv proxychains.conf proxychains.conf.bak || true
 wget -q https://github.com/purnama14/purna/raw/main/fmb/proxychains.conf
 wget -q https://github.com/purnama14/purna/raw/main/hosts
 
-sleep 1
-echo "Removing screensaver..."
 apt-get remove -y xscreensaver
+apt autoclean -y
 
-sleep 1
-echo "Reconfiguring session manager..."
 update-alternatives --config x-session-manager
-
-sleep 1
-echo "Restarting xrdp service..."
 systemctl restart xrdp
 
-echo "You have successfully installed LXDE Desktop Environment.. Enjoy!"
-echo "Cheers... MAZBRON.com _ BESTSEOTOOL.co"
+echo ""
+toilet -f future -F border "DONE!"
+echo -e "\e[32mInstallation completed successfully. Enjoy your LXDE Desktop!\e[0m"
+echo -e "\e[34mCheers... MAZBRON.com _ BESTSEOTOOL.co\e[0m"
