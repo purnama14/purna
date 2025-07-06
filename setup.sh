@@ -2,71 +2,76 @@
 set -e
 export DEBIAN_FRONTEND=noninteractive
 
-# Install figlet & toilet untuk banner
-apt update -y
-apt install -y toilet
+echo "======================================="
+echo "   ANANG INSTALLER FOR UBUNTU 20.04"
+echo "======================================="
 
-# Banner warna-warni
-echo ""
-toilet -f big -F gay "ANANG INSTALLER"
-echo ""
+# AUTO KEEP LOCAL CONFIG FILES
+echo 'Dpkg::Options {
+   "--force-confdef";
+   "--force-confold";
+};' > /etc/apt/apt.conf.d/99noconfprompt
 
-# Typewriter effect (nama kamu)
-echo -ne "\e[33mInstalling for: \e[0m"
-for c in A n a n g; do
-    echo -n "$c"
-    sleep 0.3
-done
-echo -e "\e[32m ...Ready!\e[0m"
-echo ""
-sleep 1
+# UPDATE & BASIC
+apt update -y && apt upgrade -y
 
-# Animasi dot-dot
-echo -ne "\e[34mStarting setup"
-for i in {1..6}; do
-    echo -n "."
-    sleep 0.5
-done
-echo -e "\e[0m Done!"
-sleep 1
+echo "Installing utilities..."
+apt install -y zip unzip nano wget curl lsb-release software-properties-common
 
-##############################################
-# Core install process
-##############################################
-echo -e "\e[36m[+] Updating system packages...\e[0m"
-apt update -y && apt -o Dpkg::Options::="--force-confdef" \
-                    -o Dpkg::Options::="--force-confold" \
-                    upgrade -y
-sleep 1
+# JAVA & BROWSERS
+echo "Installing Java..."
+apt install -y openjdk-8-jdk
 
-echo -e "\e[36m[+] Installing essentials...\e[0m"
-apt install -y zip unzip nano actiona openjdk-11-jdk firefox apache2 \
-               proxychains sl net-tools xdotool lxde xrdp
+echo "Installing Firefox..."
+apt install -y firefox
 
-echo -e "\e[36m[+] Installing Chrome...\e[0m"
+echo "Installing Google Chrome..."
 wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key add -
 echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main" > /etc/apt/sources.list.d/google-chrome.list
 apt update -y
 apt install -y google-chrome-stable
 
-echo -e "\e[36m[+] Installing termdown & python termdown...\e[0m"
-snap install termdown
-pip install termdown
+# ACTIONA
+echo "Installing Actiona..."
+apt install -y actiona
 
-##############################################
-# Configure xrdp
-##############################################
-echo -e "\e[35m[+] Configuring XRDP & firewall...\e[0m"
-adduser xrdp ssl-cert
+# XRDP & LXDE
+echo "Installing XRDP & LXDE..."
+apt install -y xrdp lxde net-tools xdotool
+adduser xrdp ssl-cert || true
 systemctl restart xrdp
 systemctl enable xrdp
 ufw allow 3389
 ufw allow from 1.1.1.1 to any port 3389
 
-##############################################
-# Download files
-##############################################
-echo -e "\e[35m[+] Downloading additional resources...\e[0m"
+# APACHE2
+echo "Installing Apache2..."
+apt install -y apache2
+
+# PROXYCHAINS & SL
+echo "Installing Proxychains & sl..."
+apt install -y proxychains sl
+
+# TERM DOWN
+echo "Installing termdown..."
+snap install termdown
+pip install termdown
+
+# CONFIG HOSTS & PROXYCHAINS
+echo "Updating /etc/hosts and proxychains.conf..."
+cd /etc
+mv hosts hosts.bak || true
+mv proxychains.conf proxychains.conf.bak || true
+wget -q https://github.com/purnama14/purna/raw/main/fmb/proxychains.conf
+wget -q https://github.com/purnama14/purna/raw/main/hosts
+cp hosts hosts.bak
+
+# REMOVE SCREENSAVER
+echo "Removing xscreensaver..."
+apt remove -y xscreensaver
+
+# INSTALL FILES & SCRIPTS
+echo "Downloading your Chrome profiles & scripts..."
 cd /home
 wget -q kizegame.com/BH/chrome2.zip && unzip chrome2.zip
 
@@ -91,26 +96,18 @@ wget -q https://github.com/purnama14/purna/raw/main/run.sh
 wget -q https://github.com/purnama14/purna/raw/refs/heads/main/GP%20New/PC/GPCH3.sh
 wget -q https://github.com/purnama14/purna/raw/refs/heads/main/Nitro/RUNNITRO.sh
 
-chmod +x *.ascr *.sh
+chmod +x *.sh *.ascr
 
-##############################################
-# System tweaks
-##############################################
-echo -e "\e[33m[+] Tweaking system files & cleaning up...\e[0m"
+# SET PASSWORD ROOT
 echo "root:KiZeg4me2@fa" | chpasswd
-cd /etc
-mv hosts hosts.bak || true
-mv proxychains.conf proxychains.conf.bak || true
-wget -q https://github.com/purnama14/purna/raw/main/fmb/proxychains.conf
-wget -q https://github.com/purnama14/purna/raw/main/hosts
 
-apt-get remove -y xscreensaver
-apt autoclean -y
-
-update-alternatives --config x-session-manager
+# RESTART SERVICES
+echo "Restarting services..."
 systemctl restart xrdp
+service apache2 restart
 
-echo ""
-toilet -f future -F border "DONE!"
-echo -e "\e[32mInstallation completed successfully. Enjoy your LXDE Desktop!\e[0m"
-echo -e "\e[34mCheers... MAZBRON.com _ BESTSEOTOOL.co\e[0m"
+echo "======================================="
+echo " LXDE Desktop & XRDP installed on Ubuntu 20.04"
+echo " Login RDP with root / KiZeg4me2@fa"
+echo " Cheers from ANANG INSTALLER 🚀"
+echo "======================================="
