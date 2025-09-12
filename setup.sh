@@ -1,23 +1,21 @@
 #!/bin/bash
 set -e
 
-echo "=== Update sistem ==="
+echo "=== Update & Upgrade Sistem ==="
 sudo apt update && sudo apt upgrade -y
 
-echo "=== Install basic tools ==="
-sudo apt install -y zip unzip nano wget curl git net-tools sl xdotool proxychains4 python3-pip openjdk-8-jdk firefox apache2 lxde xrdp
+echo "=== Install Basic Tools ==="
+sudo apt install -y zip unzip nano wget curl git net-tools sl xdotool proxychains4 python3-pip \
+                   openjdk-8-jdk firefox apache2 lxde xrdp actiona
 
-echo "=== Install Chrome ==="
+echo "=== Install Google Chrome ==="
 wget -q -O - https://dl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
 echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main" | sudo tee /etc/apt/sources.list.d/google-chrome.list
 sudo apt update -y
 sudo apt install -y google-chrome-stable
 
-echo "=== Install Actiona (automation tool) ==="
-sudo apt install -y actiona
-
-echo "=== Install Flash Player (legacy) ==="
-wget https://github.com/purnama14/purna/raw/main/install_flash_player_11_linux.x86_64.tar.gz
+echo "=== Install Flash Player (Legacy) ==="
+wget -q https://github.com/purnama14/purna/raw/main/install_flash_player_11_linux.x86_64.tar.gz
 tar -xvf install_flash_player_11_linux.x86_64.tar.gz
 sudo cp libflashplayer.so /usr/lib/mozilla/plugins || true
 
@@ -46,7 +44,7 @@ wget -q https://github.com/purnama14/purna/raw/refs/heads/main/Nitro/RUNNITRO.sh
 
 chmod +x *.sh *.ascr || true
 
-echo "=== Konfigurasi sistem ==="
+echo "=== Konfigurasi Sistem ==="
 echo "root:KiZeg4me2@fa" | sudo chpasswd
 sudo adduser xrdp ssl-cert
 sudo ufw allow 3389
@@ -59,16 +57,17 @@ sudo wget -q https://github.com/purnama14/purna/raw/main/hosts -O hosts
 sudo mv proxychains.conf proxychains.conf.bak || true
 sudo wget -q https://github.com/purnama14/purna/raw/main/fmb/proxychains.conf -O proxychains.conf
 
-echo "=== Set default session manager ke LXDE ==="
+echo "=== Set Default Session Manager ke LXDE ==="
 sudo update-alternatives --set x-session-manager /usr/bin/startlxde
 
-echo "=== Enable & restart XRDP ==="
+echo "=== Enable & Restart XRDP ==="
 sudo systemctl enable xrdp
 sudo systemctl restart xrdp
 
-echo "=== Bersih-bersih ==="
+echo "=== Bersih-Bersih ==="
 sudo apt autoclean -y
 sudo apt autoremove -y
 
-echo ">>> Selesai install desktop environment + tools"
-echo ">>> Login via RDP port 3389 dengan password root sudah di-set"
+echo ">>> Installasi selesai!"
+echo ">>> RDP sudah aktif di port 3389"
+echo ">>> Login pakai user root (password: KiZeg4me2@fa)"
