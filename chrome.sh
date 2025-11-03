@@ -4,7 +4,7 @@ echo "[1] Uninstall Chrome stable..."
 sudo apt remove --purge google-chrome-stable -y
 
 echo "[2] Download Chrome 127..."
-wget https://mirror.cs.uchicago.edu/google-chrome/pool/main/g/google-chrome-stable/google-chrome-stable_127.0.6533.119-1_amd64.deb -O chrome127.deb
+wget google-chrome-stable_127.0.6533.119-1_amd64.deb -O chrome127.deb
 
 echo "[3] Install Chrome 127..."
 sudo dpkg -i chrome127.deb
