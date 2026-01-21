@@ -92,7 +92,9 @@ while true; do
     echo ""
     echo "[Session] Membuka browser baru..."
     CURRENT_URL=$(get_random_url)
-    $BROWSER --incognito --new-window "$CURRENT_URL" &
+    # Buka browser incognito di background
+    # Menggunakan flag standar Chromium/Chrome + no-sandbox untuk support root user
+    $BROWSER --incognito --new-window --no-sandbox --disable-gpu "$CURRENT_URL" &
     
     # Tunggu loading awal
     echo "[Session] Loading page (10s)..."
