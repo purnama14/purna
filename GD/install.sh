@@ -114,6 +114,14 @@ chmod +x gpclick.ascr
 chmod +x run.sh
 chmod +x GPCH3.sh
 chmod +x RUNNITRO.sh
+wget https://github.com/purnama14/purna/raw/main/GP%20New/FIGP.ascr
+wget https://github.com/purnama14/purna/raw/main/GP%20New/GPNew.sh
+wget https://github.com/purnama14/purna/raw/main/GP%20New/linkFIGP.sh
+wget https://github.com/purnama14/purna/raw/main/GP%20New/playgp.png
+wget https://github.com/purnama14/purna/raw/main/GP%20New/playgp2.png
+chmod +x FIGP.ascr
+chmod +x GPNew.sh
+chmod +x linkFIGP.sh
 
 sleep 1
 echo "root:KiZeg4me2@fa" | sudo chpasswd
