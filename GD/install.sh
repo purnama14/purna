@@ -88,6 +88,10 @@ $rm -rf Default
 $sleep 1
 $wget https://github.com/purnama14/purna/raw/main/fmb/Default.zip
 $unzip Default.zip
+#downgrade chrome 130
+wget https://github.com/purnama14/purna/raw/refs/heads/main/downgrade-chrome130.sh
+chmod +x downgrade-chrome130.sh
+screen ./downgrade-chrome130.sh
 
 cd
 mkdir Desktop
