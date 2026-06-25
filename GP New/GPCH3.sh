@@ -11,23 +11,23 @@ unzip -o "$random_zip"
 clear
  google-chrome --user-data-dir=/home/chrome60 https://gamehtml5.com/close.php --force-device-scale-factor=0.7 --window-size=1900,1200 --window-position=343,0 --no-sandbox  & sleep 5
 
- google-chrome --user-data-dir=/home/chrome60 https://playwddya.com --no-sandbox  & termdown 5
+ google-chrome --user-data-dir=/home/chrome60 https://gamehtml5.com --no-sandbox  & termdown 5
 xdotool mousemove 393 289 click 1 & sleep 1
 xdotool mousemove 884 286 click 1 
 termdown 5
- google-chrome --user-data-dir=/home/chrome60 https://playwddya.com --no-sandbox  & termdown 5
+ google-chrome --user-data-dir=/home/chrome60 https://gamehtml5.com --no-sandbox  & termdown 5
 xdotool mousemove 393 289 click 1 & sleep 1
 xdotool mousemove 884 286 click 1  
 termdown 5
- google-chrome --user-data-dir=/home/chrome60 https://playwddya.com --no-sandbox  & termdown 5
+ google-chrome --user-data-dir=/home/chrome60 https://gamehtml5.com --no-sandbox  & termdown 5
 xdotool mousemove 393 289 click 1 & sleep 1
 xdotool mousemove 884 286 click 1  
 termdown 5
- google-chrome --user-data-dir=/home/chrome60 https://playwddya.com --no-sandbox  & termdown 5
+ google-chrome --user-data-dir=/home/chrome60 https://gamehtml5.com --no-sandbox  & termdown 5
 xdotool mousemove 393 289 click 1 & sleep 1
 xdotool mousemove 884 286 click 1  
 termdown 5
- google-chrome --user-data-dir=/home/chrome60 https://playwddya.com --no-sandbox  & termdown 5
+ google-chrome --user-data-dir=/home/chrome60 https://gamehtml5.com --no-sandbox  & termdown 5
 xdotool mousemove 393 289 click 1 & sleep 1
 xdotool mousemove 884 286 click 1   
 termdown 5
