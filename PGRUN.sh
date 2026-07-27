@@ -1,4 +1,3 @@
-
 #!/bin/bash
 printf '\033]2;helpbot\a'
 while :
