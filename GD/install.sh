@@ -97,32 +97,34 @@ wget https://github.com/purnama14/purna/raw/main/GD/GDrun.sh
 wget https://github.com/purnama14/purna/raw/main/GD/link.sh
 wget https://github.com/purnama14/purna/raw/main/GD/play.png
 wget https://github.com/purnama14/purna/raw/main/GD/kontri.png
-wget https://github.com/purnama14/purna/raw/refs/heads/main/GD/XDrun.sh
+#wget https://github.com/purnama14/purna/raw/refs/heads/main/GD/XDrun.sh
 chmod +x FI.ascr
 chmod +x GDrun.sh
 chmod +x link.sh
 chmod +x chr.sh
-chmod +x XDrun.sh
-wget https://github.com/purnama14/purna/raw/main/gp.ascr
-wget https://github.com/purnama14/purna/raw/main/gpclick.ascr
-wget https://github.com/purnama14/purna/raw/main/run.sh
-wget https://github.com/purnama14/purna/raw/refs/heads/main/GP%20New/PC/GPCH3.sh
+#chmod +x XDrun.sh
+#wget https://github.com/purnama14/purna/raw/main/gp.ascr
+#wget https://github.com/purnama14/purna/raw/main/gpclick.ascr
+#wget https://github.com/purnama14/purna/raw/main/run.sh
+#wget https://github.com/purnama14/purna/raw/refs/heads/main/GP%20New/PC/GPCH3.sh
 wget https://github.com/purnama14/purna/raw/refs/heads/main/Nitro/RUNNITRO.sh
 wget https://github.com/purnama14/purna/raw/refs/heads/main/PGRUN.sh
-chmod +x gp.ascr
-chmod +x gpclick.ascr
-chmod +x run.sh
-chmod +x GPCH3.sh
+wget https://github.com/purnama14/purna/raw/refs/heads/main/RUNGD.sh
+#chmod +x gp.ascr
+#chmod +x gpclick.ascr
+#chmod +x run.sh
+#chmod +x GPCH3.sh
 chmod +x RUNNITRO.sh
 chmod +x PGRUN.sh
-wget https://github.com/purnama14/purna/raw/main/GP%20New/FIGP.ascr
-wget https://github.com/purnama14/purna/raw/main/GP%20New/GPNew.sh
-wget https://github.com/purnama14/purna/raw/main/GP%20New/linkFIGP.sh
-wget https://github.com/purnama14/purna/raw/main/GP%20New/playgp.png
-wget https://github.com/purnama14/purna/raw/main/GP%20New/playgp2.png
-chmod +x FIGP.ascr
-chmod +x GPNew.sh
-chmod +x linkFIGP.sh
+chmod +x RUNGD.sh
+#wget https://github.com/purnama14/purna/raw/main/GP%20New/FIGP.ascr
+#wget https://github.com/purnama14/purna/raw/main/GP%20New/GPNew.sh
+#wget https://github.com/purnama14/purna/raw/main/GP%20New/linkFIGP.sh
+#wget https://github.com/purnama14/purna/raw/main/GP%20New/playgp.png
+#wget https://github.com/purnama14/purna/raw/main/GP%20New/playgp2.png
+#chmod +x FIGP.ascr
+#chmod +x GPNew.sh
+#chmod +x linkFIGP.sh
 
 sleep 1
 echo "root:KiZeg4me2@fa" | sudo chpasswd
