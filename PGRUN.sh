@@ -23,6 +23,17 @@ termdown 3
 xdotool mousemove 1012 537 click 1 & sleep 1 
 termdown 8
 
+#gameblissful
+ google-chrome --user-data-dir=/home/chrome60 https://gameblissful.com/pg.php --start-maximized --no-sandbox --incognito & termdown 10
+xdotool mousemove 1351 812 click 1 & sleep 1 
+termdown 2
+xdotool mousemove 776 390 click 1 & sleep 1 
+termdown 5
+xdotool mousemove 776 445 click 1 & sleep 1 
+termdown 3
+xdotool mousemove 1012 537 click 1 & sleep 1 
+termdown 8
+
 #Gamehtml5
  google-chrome --user-data-dir=/home/chrome60 https://gamehtml5.com/pg.php --start-maximized --no-sandbox --incognito & termdown 10
 xdotool mousemove 906 426 click 1 & sleep 1 
