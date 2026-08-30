@@ -20,7 +20,7 @@ termdown 5
 xdotool mousemove 776 445 click 1 & sleep 1 
 termdown 3
 xdotool mousemove 1012 537 click 1 & sleep 1 
-termdown 8
+termdown 10
 
 #gameblissful
  google-chrome --user-data-dir=/home/chrome60 https://gameblissful.com/pg.php --start-maximized --no-sandbox --incognito & termdown 10
@@ -31,7 +31,7 @@ termdown 5
 xdotool mousemove 776 445 click 1 & sleep 1 
 termdown 3
 xdotool mousemove 1012 537 click 1 & sleep 1 
-termdown 8
+termdown 10
 
 #Gamehtml5
  google-chrome --user-data-dir=/home/chrome60 https://gamehtml5.com/pg.php --start-maximized --no-sandbox --incognito & termdown 10
@@ -40,12 +40,18 @@ termdown 5
 xdotool mousemove 1002 539 click 1 & sleep 1 
 termdown 7
 
-#Takterkendali
+#Takterkendali AP
  google-chrome --user-data-dir=/home/chrome60 https://takterkendalimc.id/pg.php --start-maximized --no-sandbox --incognito & termdown 15
 xdotool mousemove 901 433 click 1 & sleep 1 
 termdown 5
 xdotool mousemove 1200 659 click 1 & sleep 1
 termdown 10 
+
+#Sasabhsu AP
+ google-chrome --user-data-dir=/home/chrome60 https://sasabhsu.com/pg.php --start-maximized --no-sandbox --incognito & termdown 15
+xdotool mousemove 904 523 click 1 & sleep 1 
+termdown 15
+
 
 
 pkill --oldest chrome
