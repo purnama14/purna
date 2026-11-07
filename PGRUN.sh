@@ -11,6 +11,19 @@ unzip -o "$random_zip"
 clear
  google-chrome --user-data-dir=/home/chrome60 https://gamehtml5.com/close.php --force-device-scale-factor=0.7 --window-size=1900,1200 --window-position=343,0 --start-maximized --no-sandbox --incognito & sleep 5
 
+
+#Jagadswara
+ google-chrome --user-data-dir=/home/chrome60 https://jagadswara.com/pg.php --start-maximized --no-sandbox --incognito & termdown 10
+xdotool mousemove 907 428 click 1 & sleep 1
+termdown 15
+
+#Fuzoneplay 
+ google-chrome --user-data-dir=/home/chrome60 https://fuzoneplay.com/pg.php --start-maximized --no-sandbox --incognito & termdown 10
+xdotool mousemove 776 470 click 1 & sleep 1 
+termdown 5
+xdotool mousemove 776 496 click 1 & sleep 1 
+termdown 15
+
 #kotrigames
  google-chrome --user-data-dir=/home/chrome60 https://kotrigames.com/pg.php --start-maximized --no-sandbox --incognito & termdown 10
 xdotool mousemove 1351 812 click 1 & sleep 1 
@@ -20,7 +33,7 @@ termdown 5
 xdotool mousemove 776 445 click 1 & sleep 1 
 termdown 3
 xdotool mousemove 1012 537 click 1 & sleep 1 
-termdown 10
+termdown 15
 
 #gameblissful
  google-chrome --user-data-dir=/home/chrome60 https://gameblissful.com/pg.php --start-maximized --no-sandbox --incognito & termdown 10
@@ -38,14 +51,14 @@ termdown 10
 xdotool mousemove 906 426 click 1 & sleep 1 
 termdown 5
 xdotool mousemove 1002 539 click 1 & sleep 1 
-termdown 7
+termdown 15
 
 #Takterkendali AP
  google-chrome --user-data-dir=/home/chrome60 https://takterkendalimc.id/pg.php --start-maximized --no-sandbox --incognito & termdown 15
 xdotool mousemove 901 433 click 1 & sleep 1 
 termdown 5
 xdotool mousemove 1200 659 click 1 & sleep 1
-termdown 10 
+termdown 15 
 
 #Sasabhsu AP
  google-chrome --user-data-dir=/home/chrome60 https://sasabhsu.com/pg.php --start-maximized --no-sandbox --incognito & termdown 15
