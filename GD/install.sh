@@ -80,7 +80,7 @@ tar -xvf NL.tar.gz
 cd /home
 mkdir de
 cd de
-wget https://gamehtml5.com/BH/DE.tar.gz
+wget https://gamehtml5.com/DE.tar.gz
 tar -xvf DE.tar.gz
 #2022 update profile chrome60
 $cd chrome60
