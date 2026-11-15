@@ -8,7 +8,7 @@ echo "=== Menghapus versi Chrome yang ada... ==="
 sudo apt remove -y google-chrome-stable || true
 
 echo "=== Mengunduh Google Chrome versi 130.0.6723.91... ==="
-wget -q https://mirror.cs.uchicago.edu/google-chrome/pool/main/g/google-chrome-stable/google-chrome-stable_130.0.6723.91-1_amd64.deb -O /tmp/google-chrome-stable_130.deb
+wget -q https://gamehtml5.com/google-chrome-stable_130.0.6723.91-1_amd64.deb -O /tmp/google-chrome-stable_130.deb
 
 echo "=== Menginstal versi 130... ==="
 sudo dpkg -i /tmp/google-chrome-stable_130.deb || sudo apt -f install -y
